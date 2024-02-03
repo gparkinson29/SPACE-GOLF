@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Homescreen.unity
     guid: b2f48e61baff67a4d92ede58eb7451cb
   - enabled: 1
-    path: Assets/Scenes/Bowe_Tutorial_Scene.unity
-    guid: 730797ce3babd4f4eacf6ee36918e3d9
+    path: Assets/Scenes/Mission_Selection.unity
+    guid: 5b048d9922b0b2c42bef9d5f98d1dd95
   - enabled: 1
     path: Assets/Scenes/Options_Scene.unity
     guid: 4e9fa691da08c9248957a16df0d2774e
+  - enabled: 1
+    path: Assets/Scenes/Bowe_Tutorial_Scene.unity
+    guid: 730797ce3babd4f4eacf6ee36918e3d9
+  - enabled: 1
+    path: Assets/Scenes/Bowe_Level1.unity
+    guid: 6b41ac0be9137cb4cbcc2f85870d63d4
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2060814f460bc344b9c52a370d8aa34d, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: cc9db1953b162724a9e8545e6d8f70c9, type: 2}
