@@ -3,15 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - OverCam
+  - LVLcontroller
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - User
   - Water
   - UI
-  - 
+  - Obstacle
   - 
   - 
   - Post-Process
