@@ -82,4 +82,61 @@ public class PlayerController : MonoBehaviour
         powerOutput = power * direction;
         rb.AddForce(direction * power, ForceMode.Impulse);
     }
+
+
+
+    ///Code to Rotate player based on button input
+    /*
+    
+            if (isRotating)
+        {
+            if (rotateLeft)
+            {
+                this.transform.Rotate(0f, -0.5f, 0f);
+            }
+            else if (rotateRight)
+            {
+                this.transform.Rotate(0f, 0.5f, 0f);
+            }
+        }
+    
+    public void RotateLeft()
+    {
+        rotateLeft = true;
+        rotateRight = false;
+    }
+
+    public void RotateRight()
+    {
+        rotateRight = true;
+        rotateLeft = false;
+    }
+
+    public void Rotation(bool shouldRotate)
+    {
+        isRotating = shouldRotate;
+    }
+    */
+
+
+    ///Code to pinch and zoom in and out
+    /*
+     if (Input.touchCount == 2)
+            {
+                pinchTouchOne = Input.GetTouch(0);
+                pinchTouchTwo = Input.GetTouch(1);
+                previousFingerDistance = ((pinchTouchOne.position - pinchTouchOne.deltaPosition) - (pinchTouchTwo.position - pinchTouchTwo.deltaPosition)).magnitude;
+                currentFingerDistance = Vector2.Distance(pinchTouchOne.position, pinchTouchTwo.position);
+                zoomDistance = Vector2.Distance(pinchTouchOne.deltaPosition, pinchTouchTwo.deltaPosition) * 0.01f;
+                if (previousFingerDistance > currentFingerDistance)
+                {
+                    Camera.main.fieldOfView += zoomDistance;
+                }
+                else if (previousFingerDistance < currentFingerDistance)
+                {
+                    Camera.main.fieldOfView -= zoomDistance;
+                }
+                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 10f, 80f);
+            }
+    */
 }

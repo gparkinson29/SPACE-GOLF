@@ -16,6 +16,7 @@ public class Options : MonoBehaviour
     private AudioSource music;
     [SerializeField]
     private AudioSource SFX;
+    private bool isLoading = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,6 +29,7 @@ public class Options : MonoBehaviour
     {
         musicSlider.value = PlayerPrefs.GetFloat("Music_Volume");
         SFXSlider.value = PlayerPrefs.GetFloat("SFX_Volume");
+        isLoading = false;
     }
 
     public void OnMusicSliderChange(float newValue)
@@ -41,6 +43,10 @@ public class Options : MonoBehaviour
     public void OnSFXSliderChange(float newValue)
     {
         SFXSlider.value = newValue;
+        if (!isLoading)
+        {
+            SFX.Play();
+        }
         SFX.volume = newValue;
         PlayerPrefs.SetFloat("SFX_Volume", newValue);
         PlayerPrefs.Save();
