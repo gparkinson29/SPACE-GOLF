@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public bool debug = true;
     public Vector3 powerOutput;
 
+    
 
     private void Awake()
     {
@@ -40,6 +41,9 @@ public class PlayerController : MonoBehaviour
         if (lvlController.GetGameState() == LevelController.gameState.putting)//for later when the game state script is more implemented
         {
             PuttingState();
+        }else if (lvlController.GetGameState() == LevelController.gameState.shooting)
+        {
+            
         }
     }
     private void FixedUpdate()
