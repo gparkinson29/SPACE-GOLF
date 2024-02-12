@@ -12,13 +12,21 @@ public class PlayerController : MonoBehaviour
     private bool mouseDown = false;
     private Vector3 mouseStartPos;
     private Rigidbody rb;
+    public float speed = 100.0f;
+
+    //Touch Vars
+    private Touch touch;
+    private bool waiting = false;
+    private Vector3 startpos = Vector3.zero;
 
     //Camera Vars
     private Camera overlayCam;
     private Camera activeCam;//for later use, switching between the overlay camera and the main camera for raycasting
 
     //Debug Vars
+    public bool debug = true;
     public Vector3 powerOutput;
+
 
     private void Awake()
     {
@@ -34,12 +42,28 @@ public class PlayerController : MonoBehaviour
             PuttingState();
         }
     }
+    private void FixedUpdate()
+    {
+
+    }
 
     //steps to movement:
     //mouse down save screen pos, mouse up calculate 
     private void PuttingState()
     {
-        if (checkMouse())
+        if (debug)
+        {
+            MouseDragShoot();
+        }
+        else
+        {
+            DragShoot();
+        }
+    }
+
+    private void MouseDragShoot()
+    {
+        if (CheckMouse())
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -53,12 +77,12 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 mouseDown = false;
-                PuttPlayer(mouseStartPos - Input.mousePosition, Vector3.Distance(mouseStartPos, Input.mousePosition)/10);
+                PuttPlayer(mouseStartPos - Input.mousePosition, Vector3.Distance(mouseStartPos, Input.mousePosition) / 10);
             }
         }
     }
 
-    private bool checkMouse()//checks if the mouse is over the player
+    private bool CheckMouse()//checks if the mouse is over the player
     {
         string[] layermask = new string[1] { "User" };//set up layers for the raycast to target
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -69,6 +93,49 @@ public class PlayerController : MonoBehaviour
             return hit.transform.gameObject.Equals(gameObject);
         }
         return false;
+    }
+    private bool CheckTouch(int i)
+    {
+        touch = Input.GetTouch(i);
+        string[] layermask = new string[1] { "User" };//set up layers for the raycast to target
+        Ray ray = Camera.main.ScreenPointToRay(touch.position);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100, LayerMask.GetMask(layermask)) && touch.phase == TouchPhase.Began)
+        {
+            Debug.Log(hit.transform.name);
+            return hit.transform.gameObject.Equals(gameObject);
+        }
+        return false;
+    }
+
+    private void DragShoot()
+    {
+        //Swipe
+        //Mobile 2
+        Vector3 movement = new Vector3(Input.acceleration.y, 0.0f, Input.acceleration.x);
+        //Debug.Log("Mobile device");
+        if (Input.touchCount > 0)
+        {
+            string[] layermask = new string[1] { "User" };
+            touch = Input.GetTouch(0);
+            RaycastHit currentPos;
+            Ray currentRay = Camera.main.ScreenPointToRay(touch.position);
+            Physics.Raycast(currentRay, out currentPos);
+            if (CheckTouch(0) && !waiting)
+            {
+                waiting = true;
+                startpos = currentPos.point;
+                Debug.Log(waiting);
+            }
+            else if (touch.phase == TouchPhase.Ended && waiting)
+            {
+                waiting = false;
+                Debug.Log(waiting);
+                Debug.DrawLine(startpos, currentPos.point, Color.green);
+                GetComponent<Rigidbody>().AddForce((startpos - currentPos.point) * speed);
+            }
+        }
+        //GetComponent<Rigidbody>().AddForce(movement * speed * Time.deltaTime);
     }
 
     private void PuttPlayer(Vector3 direction, float power)
