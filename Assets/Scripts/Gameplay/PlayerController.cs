@@ -5,8 +5,16 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+
     //Getting Level Controller
     private LevelController lvlController; //This is our LevelController
+
+    //Gameplay Vars
+    public int power = 5;
+    public float maxInput = 1000;
+
+    //UI vars
+    public PowerUIController powerUIController;
 
     //Movement Vars
     private bool mouseDown = false;
@@ -38,6 +46,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         overlayCam = GameObject.FindGameObjectWithTag("OverCam").GetComponent<Camera>();
         lvlController = GameObject.FindGameObjectWithTag("LVLcontroller").GetComponent<LevelController>();
+        powerUIController.InitPower(power);
     }
 
     private void FixedUpdate()
@@ -58,7 +67,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-
+        powerUIController.UpdatePower(power);
     }
 
     //steps to movement:
@@ -131,7 +140,7 @@ public class PlayerController : MonoBehaviour
         return false;
     }
 
-
+    //Used In Game
     private void DragShoot()
     {
         //Swipe
@@ -153,20 +162,31 @@ public class PlayerController : MonoBehaviour
             }
             else if (touch.phase == TouchPhase.Ended && waiting)
             {
+                //Release Shot
+                power--;
                 waiting = false;
                 Debug.Log(waiting);
                 Debug.DrawLine(startpos, currentPos.point, Color.green);
                 Vector3 force = (startpos - currentPos.point) * speed;
                 force.y = 0.0f;
+                //force.x = Mathf.Clamp(force.x, 0, maxInput);
+                //force.z = Mathf.Clamp(force.z, 0, maxInput);
                 rb.AddForce(force);
                 lvlController.SetGameState(LevelController.gameState.shooting);
             }
         }
         //GetComponent<Rigidbody>().AddForce(movement * speed * Time.deltaTime);
     }
+    //UI Feedback for Phone
+    private void PowerRep()
+    {
+
+    }
 
 
-    //used in game
+
+
+    //debug purposes
     private void PuttPlayer(Vector3 direction, float power)
     {
         direction = Vector3.Normalize(direction);
@@ -178,8 +198,6 @@ public class PlayerController : MonoBehaviour
         powerOutput = power * direction;
         rb.AddForce(direction * power, ForceMode.Impulse);
     }
-
-    //debug purposes
     private void MouseDragShoot()
     {
         if (CheckMouse())

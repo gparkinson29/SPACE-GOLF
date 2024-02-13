@@ -410,6 +410,8 @@
 "Assets/Scripts/Managers/Audio/SFXManager.cs"
 "Assets/Scripts/Managers/ScoreManager.cs"
 "Assets/Scripts/UI/GameOverScreen.cs"
+"Assets/Scripts/UI/GameplayUi/PowerBarUI.cs"
+"Assets/Scripts/UI/GameplayUi/PowerUIController.cs"
 "Assets/Scripts/UI/MissionScreen.cs"
 "Assets/Scripts/UI/Options.cs"
 "Assets/Scripts/UI/PauseScreen.cs"

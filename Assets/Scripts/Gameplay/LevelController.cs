@@ -18,6 +18,7 @@ public class LevelController : MonoBehaviour
     }
     private gameState _state; //current state
 
+
     private void Awake()
     {
         _state = 0;
