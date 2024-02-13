@@ -15,6 +15,6 @@ public class UIfeebackController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Text.text = "("+m_Controller.powerOutput.x + ","+ m_Controller.powerOutput.y + "," + m_Controller.powerOutput.z + ")";
+        m_Text.text = "("+m_Controller.debugCon.GetGameState() +")\n"+m_Controller.powerOutput.magnitude;
     }
 }

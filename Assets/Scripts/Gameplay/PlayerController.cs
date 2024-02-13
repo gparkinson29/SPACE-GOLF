@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     private Touch touch;
     private bool waiting = false;
     private Vector3 startpos = Vector3.zero;
+    //pinch zoom
+    private float previousFingerDistance;
+    private float currentFingerDistance;
 
     //Camera Vars
     private Camera overlayCam;
@@ -26,6 +29,7 @@ public class PlayerController : MonoBehaviour
     //Debug Vars
     public bool debug = true;
     public Vector3 powerOutput;
+    public LevelController debugCon;
 
     
 
@@ -36,17 +40,23 @@ public class PlayerController : MonoBehaviour
         lvlController = GameObject.FindGameObjectWithTag("LVLcontroller").GetComponent<LevelController>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        //Can only put while still
+        powerOutput = rb.velocity;
+        debugCon = lvlController;
         if (lvlController.GetGameState() == LevelController.gameState.putting)//for later when the game state script is more implemented
         {
             PuttingState();
         }else if (lvlController.GetGameState() == LevelController.gameState.shooting)
         {
-            
+            if (CheckStopRolling())
+            {
+                lvlController.SetGameState(LevelController.gameState.putting);
+            }
         }
     }
-    private void FixedUpdate()
+    private void Update()
     {
 
     }
@@ -62,26 +72,25 @@ public class PlayerController : MonoBehaviour
         else
         {
             DragShoot();
-        }
-    }
+            //pinch zoom
 
-    private void MouseDragShoot()
-    {
-        if (CheckMouse())
-        {
-            if (Input.GetMouseButtonDown(0))
+            //I can't test this on pc, so someone else will have to test this
+            if (Input.touchCount == 2)
             {
-                mouseDown = true;
-                mouseStartPos = Input.mousePosition;
-            }
-        }
-
-        if (mouseDown)
-        {
-            if (Input.GetMouseButtonUp(0))
-            {
-                mouseDown = false;
-                PuttPlayer(mouseStartPos - Input.mousePosition, Vector3.Distance(mouseStartPos, Input.mousePosition) / 10);
+                Touch pinchTouchOne = Input.GetTouch(0);
+                Touch pinchTouchTwo = Input.GetTouch(1);
+                previousFingerDistance = ((pinchTouchOne.position - pinchTouchOne.deltaPosition) - (pinchTouchTwo.position - pinchTouchTwo.deltaPosition)).magnitude;
+                currentFingerDistance = Vector2.Distance(pinchTouchOne.position, pinchTouchTwo.position);
+                float zoomDistance = Vector2.Distance(pinchTouchOne.deltaPosition, pinchTouchTwo.deltaPosition) * 0.01f;
+                if (previousFingerDistance > currentFingerDistance)
+                {
+                    Camera.main.fieldOfView += zoomDistance;
+                }
+                else if (previousFingerDistance < currentFingerDistance)
+                {
+                    Camera.main.fieldOfView -= zoomDistance;
+                }
+                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 10f, 80f);
             }
         }
     }
@@ -111,6 +120,17 @@ public class PlayerController : MonoBehaviour
         }
         return false;
     }
+    private bool CheckStopRolling()
+    {
+        if(rb.velocity.magnitude < 0.3)
+        {
+            rb.velocity = Vector3.zero;
+            rb.Sleep();
+            return true;
+        }
+        return false;
+    }
+
 
     private void DragShoot()
     {
@@ -136,12 +156,17 @@ public class PlayerController : MonoBehaviour
                 waiting = false;
                 Debug.Log(waiting);
                 Debug.DrawLine(startpos, currentPos.point, Color.green);
-                GetComponent<Rigidbody>().AddForce((startpos - currentPos.point) * speed);
+                Vector3 force = (startpos - currentPos.point) * speed;
+                force.y = 0.0f;
+                rb.AddForce(force);
+                lvlController.SetGameState(LevelController.gameState.shooting);
             }
         }
         //GetComponent<Rigidbody>().AddForce(movement * speed * Time.deltaTime);
     }
 
+
+    //used in game
     private void PuttPlayer(Vector3 direction, float power)
     {
         direction = Vector3.Normalize(direction);
@@ -154,6 +179,27 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(direction * power, ForceMode.Impulse);
     }
 
+    //debug purposes
+    private void MouseDragShoot()
+    {
+        if (CheckMouse())
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                mouseDown = true;
+                mouseStartPos = Input.mousePosition;
+            }
+        }
+
+        if (mouseDown)
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                mouseDown = false;
+                PuttPlayer(mouseStartPos - Input.mousePosition, Vector3.Distance(mouseStartPos, Input.mousePosition) / 10);
+            }
+        }
+    }
 
 
     ///Code to Rotate player based on button input

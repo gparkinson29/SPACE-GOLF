@@ -51,9 +51,9 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    public void SetGameState(int i)
+    public void SetGameState(gameState state)
     {
-
+        _state = state;
     }
     public gameState GetGameState()
     {

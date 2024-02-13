@@ -18,9 +18,14 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        if (lvlController.GetGameState() == LevelController.gameState.putting)
+        switch (lvlController.GetGameState())
         {
-            transform.position = player.transform.position;
+            case LevelController.gameState.putting:
+                transform.position = player.transform.position;
+                break;
+            case LevelController.gameState.shooting:
+                transform.position = player.transform.position;
+                break;
         }
     }
 }
