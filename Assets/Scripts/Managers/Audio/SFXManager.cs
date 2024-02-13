@@ -7,11 +7,9 @@ public class SFXManager : MonoBehaviour
     [SerializeField]
     private AudioSource[] SFXSource;
     [SerializeField]
-    private AudioSource movementSource, portalSource, platformSource, powerDownSource, laserSource, buttonSource, endAudio;
+    private AudioSource movementSource, portalSource, platformSource, powerDownSource, laserSource, buttonSource, ambience1, ambience2;
     [SerializeField]
     private AudioClip[] thrusterSounds, powerDownSounds;
-    [SerializeField]
-    private AudioClip winAudio, lossAudio;
 
 
     // Start is called before the first frame update
@@ -46,19 +44,6 @@ public class SFXManager : MonoBehaviour
     {
         laserSource.Play();
     }
-
-    public void PlayGameLossAudio()
-    {
-        endAudio.clip = lossAudio;
-        endAudio.Play();
-    }
-
-    public void PlayGameWinAudio()
-    {
-        endAudio.clip = winAudio;
-        endAudio.Play();
-    }
-
 
     public AudioSource[] GetSFXAudio()
     {

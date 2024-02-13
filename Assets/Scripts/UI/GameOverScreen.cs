@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameOverScreen : MonoBehaviour
 {
     [SerializeField]
-    private SFXManager sfxManager;
+    private StateAudio stateManager;
     [SerializeField]
     private MusicManager musicManager;
     [SerializeField]
@@ -23,12 +23,12 @@ public class GameOverScreen : MonoBehaviour
         if (levelControl.GetGameState() == LevelController.gameState.Win) //if the player has entered the hole, play success sound
         {
             winLosetext.text = "You won!";
-            sfxManager.PlayGameWinAudio();
+            stateManager.PlayGameWinAudio();
         }
         else if (levelControl.GetGameState() == LevelController.gameState.Lose) //if the player has run out of fuel, play the game over audio
         {
             winLosetext.text = "You ran out of fuel!";
-            sfxManager.PlayGameLossAudio();
+            stateManager.PlayGameLossAudio();
 
         }
         scoreText.text = scoreManager.GetScore().ToString();

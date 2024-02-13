@@ -9,21 +9,17 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private SFXManager SFXManager;
     [SerializeField]
-    private AmbienceManager ambienceManager;
-    private AudioSource[] allSFX, allAmbience;
+    private StateAudio stateManager;
+    private AudioSource[] allSFX;
 
     void Awake()
     {
         allSFX = SFXManager.GetSFXAudio();
-        allAmbience = ambienceManager.GetAmbienceAudio();
         foreach (AudioSource source in allSFX)
         {
             source.volume = PlayerPrefs.GetFloat("SFX_Volume");
         }
-        foreach (AudioSource source in allAmbience)
-        {
-            source.volume = PlayerPrefs.GetFloat("SFX_Volume");
-        }
+        stateManager.GetStateAudio().volume = PlayerPrefs.GetFloat("SFX_Volume");
         musicManager.GetMusicSource().volume = PlayerPrefs.GetFloat("Music_Volume");
     }
 

@@ -17,11 +17,15 @@ public class LevelController : MonoBehaviour
         Pause //pause game
     }
     private gameState _state; //current state
+    private int currentLevel;
+    private bool hasUpdatedCurrentLevel;
 
 
     private void Awake()
     {
         _state = 0;
+        currentLevel = PlayerPrefs.GetInt("currentLevel");
+        hasUpdatedCurrentLevel = false;
     }
     private void Update()
     {
@@ -40,6 +44,11 @@ public class LevelController : MonoBehaviour
             case gameState.shooting:
                 break;
             case gameState.Win: 
+                if (!hasUpdatedCurrentLevel)
+                {
+                    SetLevel();
+                    hasUpdatedCurrentLevel=true;
+                }
                 break;
             case gameState.Lose:
                 break;
@@ -59,5 +68,12 @@ public class LevelController : MonoBehaviour
     public gameState GetGameState()
     {
         return _state;
+    }
+
+    public void SetLevel()
+    {
+        currentLevel++;
+        PlayerPrefs.SetInt("currentLevel", currentLevel);
+        PlayerPrefs.Save();
     }
 }

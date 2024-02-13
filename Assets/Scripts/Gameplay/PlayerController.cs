@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public PowerUIController powerUIController;
 
     //Movement Vars
-    private bool mouseDown = false;
+    private bool mouseDown = false, isRotating = false, rotateLeft = false, rotateRight = false;
     private Vector3 mouseStartPos;
     private Rigidbody rb;
     public float speed = 100.0f;
@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
         {
             DragShoot();
             //pinch zoom
+            CheckRotation();
 
             //I can't test this on pc, so someone else will have to test this
             if (Input.touchCount == 2)
@@ -221,19 +222,6 @@ public class PlayerController : MonoBehaviour
 
 
     ///Code to Rotate player based on button input
-    /*
-    
-            if (isRotating)
-        {
-            if (rotateLeft)
-            {
-                this.transform.Rotate(0f, -0.5f, 0f);
-            }
-            else if (rotateRight)
-            {
-                this.transform.Rotate(0f, 0.5f, 0f);
-            }
-        }
     
     public void RotateLeft()
     {
@@ -251,8 +239,21 @@ public class PlayerController : MonoBehaviour
     {
         isRotating = shouldRotate;
     }
-    */
 
+    public void CheckRotation()
+    {
+        if (isRotating)
+        {
+            if (rotateLeft)
+            {
+                this.transform.Rotate(0f, -5f, 0f);
+            }
+            else if (rotateRight)
+            {
+                this.transform.Rotate(0f, 5f, 0f);
+            }
+        }
+    }
 
     ///Code to pinch and zoom in and out
     /*
