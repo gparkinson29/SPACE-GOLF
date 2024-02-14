@@ -15,10 +15,10 @@ public class PlayerController : MonoBehaviour
     private Vector3 aimDirect;
 
     //UI vars
-    [SerializeField] public PowerUIController powerUIController;
-    [SerializeField] public Slider powerSlider;//controls power of shot
-    [SerializeField] public RawImage aimIndicator;
-    [SerializeField] public Button fireingButton;
+    public PowerUIController powerUIController;
+    public Slider powerSlider;//controls power of shot
+    public RawImage aimIndicator;
+    public Button fireingButton;
 
     //Movement Vars
     private bool mouseDown = false, isRotating = false, rotateLeft = false, rotateRight = false;
