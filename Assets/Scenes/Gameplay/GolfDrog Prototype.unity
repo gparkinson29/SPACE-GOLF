@@ -285,6 +285,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3344801755036668083, guid: 90cc4697f77b1b14aa4cbbef5d890098, type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 93105807}
+    - target: {fileID: -3344801755036668083, guid: 90cc4697f77b1b14aa4cbbef5d890098, type: 3}
       propertyPath: sfxManager
       value: 
       objectReference: {fileID: 2029284446}
@@ -407,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 487306, guid: 5b6818f257d91ba40a8c07302be0b55c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1564126
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 487306, guid: 5b6818f257d91ba40a8c07302be0b55c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2667,11 +2671,11 @@ PrefabInstance:
     - target: {fileID: 651052259091298401, guid: a680fb982a06e1740bee29febc362743, type: 3}
       propertyPath: winAudio
       value: 
-      objectReference: {fileID: 8300000, guid: 44e0de68b13ae2448997b2fcd40ca968, type: 3}
+      objectReference: {fileID: 8300000, guid: 269a512d5c9d70844a2bd68bd55a0f39, type: 3}
     - target: {fileID: 651052259091298401, guid: a680fb982a06e1740bee29febc362743, type: 3}
       propertyPath: lossAudio
       value: 
-      objectReference: {fileID: 8300000, guid: 269a512d5c9d70844a2bd68bd55a0f39, type: 3}
+      objectReference: {fileID: 8300000, guid: 44e0de68b13ae2448997b2fcd40ca968, type: 3}
     - target: {fileID: 1199910570009366040, guid: a680fb982a06e1740bee29febc362743, type: 3}
       propertyPath: stateManager
       value: 
