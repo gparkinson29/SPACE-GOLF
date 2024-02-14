@@ -60,8 +60,11 @@ public class PlayerController : MonoBehaviour
         //Can only put while still
         powerOutput = rb.velocity;
         debugCon = lvlController;
+        //UI based on putting
         powerSlider.enabled = lvlController.GetGameState() == LevelController.gameState.putting;
         fireingButton.enabled = lvlController.GetGameState() == LevelController.gameState.putting;
+        aimIndicator.gameObject.SetActive(lvlController.GetGameState() == LevelController.gameState.putting);
+        //
         if (lvlController.GetGameState() == LevelController.gameState.putting)//for later when the game state script is more implemented
         {
             PuttingState();
@@ -89,7 +92,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             PowerRep();
-            DragAim();
+            //DragAim(); //uses finger to aim
             powerOfShot = powerSlider.value;
             //pinch zoom
             CheckRotation();
@@ -161,6 +164,7 @@ public class PlayerController : MonoBehaviour
             if (rb.velocity.magnitude < 0.3)
             {
                 rb.velocity = Vector3.zero;
+                transform.rotation = new Quaternion(0,0,0,0);
                 rb.Sleep();
                 lvlController.SetGameState(LevelController.gameState.putting);
                 shootingRoutine = false;
@@ -169,6 +173,7 @@ public class PlayerController : MonoBehaviour
     }
 
     //Used In Game
+    //replaced with button
     private void DragAim()
     {
         //Swipe
@@ -205,36 +210,52 @@ public class PlayerController : MonoBehaviour
 
     //UI Feedback for Phone
     private void PowerRep()
-{
-    if (aimDirect != null)
     {
-        float angle = Vector3.Angle(aimDirect, Vector3.forward);
-        Debug.Log(aimDirect.x);
+        //based on aim direct
+        if (false)
+        {
+            float angle = Vector3.Angle(aimDirect, Vector3.forward);
+            Debug.Log(aimDirect.x);
 
-        if (aimDirect.x < 0)
-        {
-            aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, angle));
+            if (aimDirect.x < 0)
+            {
+                aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, angle));
+            }
+            else
+            {
+                aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, -angle));
+            }
         }
-        else
+        else//based on direction ball is faceing
         {
-            aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, -angle));
+            aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, -transform.localRotation.eulerAngles.y));
         }
     }
-}
 
     public void Shoot()
-{
-    if (lvlController.GetGameState() == LevelController.gameState.putting)
     {
-        rb.AddForce(aimDirect * (powerOfShot), ForceMode.Impulse);
-        lvlController.SetGameState(LevelController.gameState.shooting);
-        power--;
+        //based on direction being faced
+        if (lvlController.GetGameState() == LevelController.gameState.putting)
+        {
+            Vector3 aimForce = transform.forward;
+            aimForce.y = 0;
+
+            rb.AddForce(aimForce * (powerOfShot), ForceMode.Impulse);
+            lvlController.SetGameState(LevelController.gameState.shooting);
+            power--;
+        }
+        //not based on direction being faced
+        /*if (lvlController.GetGameState() == LevelController.gameState.putting)
+        {
+            rb.AddForce(aimDirect * (powerOfShot), ForceMode.Impulse);
+            lvlController.SetGameState(LevelController.gameState.shooting);
+            power--;
+        }*/
     }
-}
 
 
-//debug purposes
-private void PuttPlayer(Vector3 direction, float power)
+    //debug purposes
+    private void PuttPlayer(Vector3 direction, float power)
     {
         direction = Vector3.Normalize(direction);
 
@@ -267,7 +288,9 @@ private void PuttPlayer(Vector3 direction, float power)
     }
 
 
-    ///Code to Rotate player based on button input
+    ///Code to Rotate player based on button input <summary>
+    
+    //Gonna have to edit this, saving for later
     
     public void RotateLeft()
     {
@@ -300,7 +323,7 @@ private void PuttPlayer(Vector3 direction, float power)
             }
         }
     }
-
+    
     ///Code to pinch and zoom in and out
     /*
      if (Input.touchCount == 2)
