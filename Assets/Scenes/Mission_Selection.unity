@@ -123,6 +123,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &25954404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25954406}
+  - component: {fileID: 25954405}
+  m_Layer: 0
+  m_Name: level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25954405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25954404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f380550535c3ce34ea61217b93cdcb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 194260833}
+--- !u!4 &25954406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25954404}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.81299996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &162633093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +1980,10 @@ PrefabInstance:
       propertyPath: stateManager
       value: 
       objectReference: {fileID: 1930913518}
+    - target: {fileID: 2137635833255652201, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+      propertyPath: lvlController
+      value: 
+      objectReference: {fileID: 25954405}
     - target: {fileID: 2757721060551959640, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
       propertyPath: SFXSource.Array.data[0]
       value: 
@@ -2108,7 +2157,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1545035624}
         m_TargetAssemblyTypeName: MissionScreen, Assembly-CSharp
-        m_MethodName: OnTutorialClicked
+        m_MethodName: On1_1Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2167,7 +2216,7 @@ GameObject:
   - component: {fileID: 2068997715}
   - component: {fileID: 2068997716}
   m_Layer: 5
-  m_Name: Tutorial_Button (1)
+  m_Name: Level1_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2223,3 +2272,4 @@ SceneRoots:
   - {fileID: 464783464}
   - {fileID: 194260837}
   - {fileID: 1029821647}
+  - {fileID: 25954406}

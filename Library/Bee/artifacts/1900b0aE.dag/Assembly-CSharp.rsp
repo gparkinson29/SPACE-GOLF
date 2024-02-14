@@ -402,6 +402,7 @@
 "Assets/Scripts/Debug/UIfeebackController.cs"
 "Assets/Scripts/Gameplay/CameraController.cs"
 "Assets/Scripts/Gameplay/LevelController.cs"
+"Assets/Scripts/Gameplay/Obstacles/EndGameFlagpole.cs"
 "Assets/Scripts/Gameplay/Obstacles/Laser.cs"
 "Assets/Scripts/Gameplay/PlayerController.cs"
 "Assets/Scripts/Managers/Audio/AudioManager.cs"

@@ -74,7 +74,11 @@ public class PowerUIController : MonoBehaviour
         {
             _current = state.medium;
         }
-        else
+        else if ((float)currentPower / (float)startingPower <= 0)
+        {
+            lvlController.SetGameState(LevelController.gameState.Lose);
+        }
+        else 
         {
             _current = state.low;
         }
@@ -133,5 +137,15 @@ public class PowerUIController : MonoBehaviour
     public void debugUIstate(int i)
     {
         _current = (state)i;
+    }
+
+    public int GetStartingPower()
+    {
+        return startingPower;
+    }
+
+    public int GetCurrentPower()
+    {
+        return currentPower;
     }
 }

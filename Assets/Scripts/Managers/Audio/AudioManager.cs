@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     private SFXManager SFXManager;
     [SerializeField]
     private StateAudio stateManager;
+    [SerializeField]
+    private LevelController lvlController;
     private AudioSource[] allSFX;
 
     void Awake()
@@ -25,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0)
+        if (Time.timeScale == 0 || lvlController.GetGameState() == LevelController.gameState.Win || lvlController.GetGameState() == LevelController.gameState.Lose)
         {
             StopPlayback();
         }
@@ -49,15 +51,10 @@ public class AudioManager : MonoBehaviour
     void ResumePlayback()
     {
         musicManager.GetMusicSource().UnPause();
-    }
-
-    void SFXPlayback(bool shouldPlay)
-    {
         foreach (AudioSource s in allSFX)
         {
             s.UnPause();
         }
     }
-
        
 }

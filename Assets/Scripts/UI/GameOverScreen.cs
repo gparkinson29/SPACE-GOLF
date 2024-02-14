@@ -11,11 +11,12 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField]
     private MusicManager musicManager;
     [SerializeField]
-    private ScoreManager scoreManager;
+    private PowerUIController scoreUI;
     [SerializeField]
     private LevelController levelControl;
     [SerializeField]
     private Text winLosetext, scoreText;
+    private int finalScoreHolder;
 
   void Awake()
     {
@@ -24,14 +25,15 @@ public class GameOverScreen : MonoBehaviour
         {
             winLosetext.text = "You won!";
             stateManager.PlayGameWinAudio();
+            finalScoreHolder = scoreUI.GetStartingPower() - scoreUI.GetCurrentPower();
+            scoreText.text = "You finished with " + finalScoreHolder.ToString() + " power!";
         }
         else if (levelControl.GetGameState() == LevelController.gameState.Lose) //if the player has run out of fuel, play the game over audio
         {
             winLosetext.text = "You ran out of fuel!";
             stateManager.PlayGameLossAudio();
-
         }
-        scoreText.text = scoreManager.GetScore().ToString();
+        
     }
 
 

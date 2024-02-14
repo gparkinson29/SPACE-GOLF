@@ -5,6 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class PauseScreen : MonoBehaviour
 {
+    [SerializeField]
+    private LevelController levelController;
+
+    public void LaunchPause()
+    {
+        this.gameObject.SetActive(!this.gameObject.activeSelf);
+        if (this.gameObject.activeSelf)
+        {
+            levelController.SetGameState(LevelController.gameState.Pause);
+        }
+        else
+        {
+            levelController.SetGameState(LevelController.gameState.putting);
+        }
+    }
+
     public void OnHomeClick()
     {
         SceneManager.LoadScene(0);

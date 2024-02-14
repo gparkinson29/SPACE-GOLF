@@ -19,6 +19,8 @@ public class LevelController : MonoBehaviour
     private gameState _state; //current state
     private int currentLevel;
     private bool hasUpdatedCurrentLevel;
+    [SerializeField]
+    private GameObject gameOverCanvas;
 
 
     private void Awake()
@@ -48,9 +50,11 @@ public class LevelController : MonoBehaviour
                 {
                     SetLevel();
                     hasUpdatedCurrentLevel=true;
+                    gameOverCanvas.SetActive(true);
                 }
                 break;
             case gameState.Lose:
+                gameOverCanvas.SetActive(true);
                 break;
             case gameState.Pause: 
                 Time.timeScale = 0;
