@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public Slider powerSlider;
     public RawImage aimIndicator;
     public Button fireingButton;
+    public TMP_Text powerFeedback;
 
     //Movement Vars
     private bool mouseDown = false, isRotating = false, rotateLeft = false, rotateRight = false;
@@ -94,6 +96,7 @@ public class PlayerController : MonoBehaviour
             PowerRep();
             //DragAim(); //uses finger to aim
             powerOfShot = powerSlider.value;
+            powerFeedback.text = powerOfShot.ToString();
             //pinch zoom
             CheckRotation();
 
