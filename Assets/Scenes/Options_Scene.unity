@@ -946,6 +946,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1995233299}
     m_Modifications:
+    - target: {fileID: 206492051860686081, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+      propertyPath: endAudio
+      value: 
+      objectReference: {fileID: 692409943}
+    - target: {fileID: 206492051860686081, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+      propertyPath: winAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137635833255652201, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+      propertyPath: stateManager
+      value: 
+      objectReference: {fileID: 692409941}
     - target: {fileID: 2757721060551959640, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
       propertyPath: SFXSource.Array.data[0]
       value: 
@@ -1024,6 +1036,22 @@ AudioSource:
 --- !u!82 &692409940 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 3646297002514660323, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+  m_PrefabInstance: {fileID: 692409937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &692409941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 206492051860686081, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+  m_PrefabInstance: {fileID: 692409937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd73611f3d99ef48a110beb15a030fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &692409943 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2841018280163109695, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
   m_PrefabInstance: {fileID: 692409937}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &791463791

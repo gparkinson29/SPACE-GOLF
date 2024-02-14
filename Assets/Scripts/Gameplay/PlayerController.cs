@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
 
     //UI vars
     public PowerUIController powerUIController;
+    public Slider powerSlider;
+    public RawImage aimIndicator;
+    public Button fireingButton;
 
     //Movement Vars
     private bool mouseDown = false, isRotating = false, rotateLeft = false, rotateRight = false;

@@ -1187,6 +1187,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 206492051860686081, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+      propertyPath: endAudio
+      value: 
+      objectReference: {fileID: 7566554712698538930}
+    - target: {fileID: 2137635833255652201, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+      propertyPath: stateManager
+      value: 
+      objectReference: {fileID: 7566554712698538929}
     - target: {fileID: 2757721060551959640, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
       propertyPath: SFXSource.Array.data[0]
       value: 
@@ -1248,6 +1256,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+--- !u!114 &7566554712698538929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 206492051860686081, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+  m_PrefabInstance: {fileID: 7566554712698538928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd73611f3d99ef48a110beb15a030fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &7566554712698538930 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2841018280163109695, guid: dac869d897183e64aa9a7a9fa94e7015, type: 3}
+  m_PrefabInstance: {fileID: 7566554712698538928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
