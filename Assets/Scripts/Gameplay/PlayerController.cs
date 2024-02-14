@@ -10,15 +10,11 @@ public class PlayerController : MonoBehaviour
     private LevelController lvlController; //This is our LevelController
 
     //Gameplay Vars
-    public int power = 10; //number of strokes
-    public float powerOfShot; //input from the powerslider
-    private Vector3 aimDirect;
+    public int power = 5;
+    public float maxInput = 1000;
 
     //UI vars
     public PowerUIController powerUIController;
-    public Slider powerSlider;//controls power of shot
-    public RawImage aimIndicator;
-    public Button fireingButton;
 
     //Movement Vars
     private bool mouseDown = false, isRotating = false, rotateLeft = false, rotateRight = false;
@@ -43,9 +39,6 @@ public class PlayerController : MonoBehaviour
     public Vector3 powerOutput;
     public LevelController debugCon;
 
-    //State Machine Vars
-    private bool shootingRoutine = false;
-
     
 
     private void Awake()
@@ -61,16 +54,14 @@ public class PlayerController : MonoBehaviour
         //Can only put while still
         powerOutput = rb.velocity;
         debugCon = lvlController;
-        powerSlider.enabled = lvlController.GetGameState() == LevelController.gameState.putting;
-        fireingButton.enabled = lvlController.GetGameState() == LevelController.gameState.putting;
         if (lvlController.GetGameState() == LevelController.gameState.putting)//for later when the game state script is more implemented
         {
             PuttingState();
         }else if (lvlController.GetGameState() == LevelController.gameState.shooting)
         {
-            if (!shootingRoutine)
+            if (CheckStopRolling())
             {
-                StartCoroutine(CheckStopRolling());
+                lvlController.SetGameState(LevelController.gameState.putting);
             }
         }
     }
@@ -89,9 +80,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            PowerRep();
-            DragAim();
-            powerOfShot = powerSlider.value;
+            DragShoot();
             //pinch zoom
             CheckRotation();
 
@@ -128,9 +117,10 @@ public class PlayerController : MonoBehaviour
         }
         return false;
     }
-    private bool CheckTouch(int i, string[] layermask)
+    private bool CheckTouch(int i)
     {
-        touch = Input.GetTouch(i);//set up layers for the raycast to target
+        touch = Input.GetTouch(i);
+        string[] layermask = new string[1] { "User" };//set up layers for the raycast to target
         Ray ray = Camera.main.ScreenPointToRay(touch.position);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 100, LayerMask.GetMask(layermask)) && touch.phase == TouchPhase.Began)
@@ -140,38 +130,22 @@ public class PlayerController : MonoBehaviour
         }
         return false;
     }
-    private bool CheckTouch(int i)
+    private bool CheckStopRolling()
     {
-        touch = Input.GetTouch(i);//set up layers for the raycast to target
-        Ray ray = Camera.main.ScreenPointToRay(touch.position);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100) && touch.phase == TouchPhase.Began)
+        if(rb.velocity.magnitude < 0.3)
         {
-            Debug.Log(hit.transform.name);
-            return hit.transform.gameObject.Equals(gameObject);
+            rb.velocity = Vector3.zero;
+            rb.Sleep();
+            return true;
         }
         return false;
     }
-    IEnumerator CheckStopRolling()
-    {
-        shootingRoutine = true;
-        while (shootingRoutine)
-        {
-            yield return new WaitForSeconds(0.01f);
-            if (rb.velocity.magnitude < 0.3)
-            {
-                rb.velocity = Vector3.zero;
-                rb.Sleep();
-                lvlController.SetGameState(LevelController.gameState.putting);
-                shootingRoutine = false;
-            }
-        }
-    }
 
-    //Used in game
-    private void DragAim()
+    //Used In Game
+    private void DragShoot()
     {
         //Swipe
+        //Mobile 2
         Vector3 movement = new Vector3(Input.acceleration.y, 0.0f, Input.acceleration.x);
         //Debug.Log("Mobile device");
         if (Input.touchCount > 0)
@@ -181,58 +155,37 @@ public class PlayerController : MonoBehaviour
             RaycastHit currentPos;
             Ray currentRay = Camera.main.ScreenPointToRay(touch.position);
             Physics.Raycast(currentRay, out currentPos);
-            Debug.Log(touch.phase);
-            if (waiting)
-            {
-                Vector3 force = (startpos - currentPos.point) * speed;
-                force.y = 0.0f;
-                aimDirect = force.normalized;
-            }
-            if (touch.phase == TouchPhase.Ended && waiting)
-            {
-                waiting = false;
-                Debug.Log(waiting);
-                Debug.DrawLine(startpos, currentPos.point, Color.green);
-                //rb.AddForce(force);
-                //lvlController.SetGameState(LevelController.gameState.shooting);
-            }
-            else if (CheckTouch(0, layermask) && !waiting)
+            if (CheckTouch(0) && !waiting)
             {
                 waiting = true;
                 startpos = currentPos.point;
-                //Debug.Log(waiting);
+                Debug.Log(waiting);
+            }
+            else if (touch.phase == TouchPhase.Ended && waiting)
+            {
+                //Release Shot
+                power--;
+                waiting = false;
+                Debug.Log(waiting);
+                Debug.DrawLine(startpos, currentPos.point, Color.green);
+                Vector3 force = (startpos - currentPos.point) * speed;
+                force.y = 0.0f;
+                //force.x = Mathf.Clamp(force.x, 0, maxInput);
+                //force.z = Mathf.Clamp(force.z, 0, maxInput);
+                rb.AddForce(force);
+                lvlController.SetGameState(LevelController.gameState.shooting);
             }
         }
         //GetComponent<Rigidbody>().AddForce(movement * speed * Time.deltaTime);
     }
-    public void Shoot()
-    {
-        if (lvlController.GetGameState() == LevelController.gameState.putting)
-        {
-            rb.AddForce(aimDirect * (powerOfShot), ForceMode.Impulse);
-            lvlController.SetGameState(LevelController.gameState.shooting);
-            power--;
-        }
-    }
     //UI Feedback for Phone
     private void PowerRep()
     {
-        if (aimDirect != null)
-        {
-            float angle = Vector3.Angle(aimDirect, Vector3.forward);
 
-            Debug.Log(aimDirect.x);
-
-            if (aimDirect.x < 0)
-            {
-                aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, angle));
-            }
-            else
-            {
-                aimIndicator.transform.localRotation = (Quaternion.Euler(0, 0, -angle));
-            }
-        }
     }
+
+
+
 
     //debug purposes
     private void PuttPlayer(Vector3 direction, float power)
