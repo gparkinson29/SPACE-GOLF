@@ -401,6 +401,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.18f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Debug/UIfeebackController.cs"
 "Assets/Scripts/Gameplay/CameraController.cs"
+"Assets/Scripts/Gameplay/GOLFvisuals.cs"
 "Assets/Scripts/Gameplay/LevelController.cs"
 "Assets/Scripts/Gameplay/Obstacles/EndGameFlagpole.cs"
 "Assets/Scripts/Gameplay/Obstacles/Laser.cs"

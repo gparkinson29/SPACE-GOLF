@@ -18,7 +18,6 @@ public class MissionScreen : MonoBehaviour
         else
         {
             playerLevel = PlayerPrefs.GetInt("currentLevel");
-            Debug.Log(playerLevel);
         }
         for (int i = 0; i < levelList.Length; i++)
         {

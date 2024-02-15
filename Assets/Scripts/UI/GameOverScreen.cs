@@ -32,6 +32,7 @@ public class GameOverScreen : MonoBehaviour
         {
             winLosetext.text = "You ran out of fuel!";
             stateManager.PlayGameLossAudio();
+            scoreText.gameObject.SetActive(false);
         }
         
     }
