@@ -33,7 +33,11 @@ public class LevelController : MonoBehaviour
     {
         //This script should only control things that effect the entire gameplay, not just the ball or camera
         //
-        if (_state != gameState.Pause)
+        if (_state == gameState.Pause || _state == gameState.Win || _state == gameState.Lose)
+        {
+            Time.timeScale = 0;
+        }
+        else
         {
             Time.timeScale = 1;
         }
@@ -50,14 +54,17 @@ public class LevelController : MonoBehaviour
                 {
                     SetLevel();
                     hasUpdatedCurrentLevel=true;
+                    EventManager.Instance.PauseAudioPlayback();
                     gameOverCanvas.SetActive(true);
                 }
                 break;
             case gameState.Lose:
+           
+                EventManager.Instance.PauseAudioPlayback();
                 gameOverCanvas.SetActive(true);
                 break;
             case gameState.Pause: 
-                Time.timeScale = 0;
+                EventManager.Instance.PauseAudioPlayback();
                 break;
             default:
                 Debug.Log("Invalid State");

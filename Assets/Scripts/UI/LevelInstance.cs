@@ -16,8 +16,6 @@ public class LevelInstance : MonoBehaviour
     private Text textPlaceholder;
     [SerializeField]
     private Button levelAccess;
-    [SerializeField]
-    private Animator anim;
 
 
     private void Awake()
@@ -45,10 +43,5 @@ public class LevelInstance : MonoBehaviour
     public Button GetLevelAccessButton()
     {
         return levelAccess;
-    }
-
-    public Animator GetAnimator()
-    {
-        return anim;
     }
   }

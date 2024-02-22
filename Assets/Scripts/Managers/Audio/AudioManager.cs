@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class AudioManager : MonoBehaviour
     private SFXManager SFXManager;
     [SerializeField]
     private StateAudio stateManager;
-    [SerializeField]
-    private LevelController lvlController;
     private AudioSource[] allSFX;
 
     void Awake()
@@ -27,18 +26,15 @@ public class AudioManager : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeScale == 0 || lvlController.GetGameState() == LevelController.gameState.Win || lvlController.GetGameState() == LevelController.gameState.Lose)
+        if (Time.timeScale == 1)
         {
-            StopPlayback();
-        }
-        else
-        {
-            ResumePlayback();
+            //muteAllAudio?.Invoke();
+            EventManager.Instance.ResumeAudioPlayback();
         }
     }
 
 
-    void StopPlayback()
+    /*void StopPlayback()
     {
         musicManager.GetMusicSource().Pause();
         foreach (AudioSource s in allSFX)
@@ -55,6 +51,6 @@ public class AudioManager : MonoBehaviour
         {
             s.UnPause();
         }
-    }
+    }*/
        
 }

@@ -52,9 +52,10 @@ public class Options : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void OnBatterySaverChange()
+    public void OnResetProgressionChange()
     {
-
+        PlayerPrefs.SetInt("currentLevel", 0);
+        PlayerPrefs.Save();
     }
 
 
