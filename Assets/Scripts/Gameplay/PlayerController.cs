@@ -69,6 +69,8 @@ public class PlayerController : MonoBehaviour
         //
         if (lvlController.GetGameState() == LevelController.gameState.putting)//for later when the game state script is more implemented
         {
+            rb.drag = 0;
+            rb.freezeRotation = true;
             PuttingState();
         }else if (lvlController.GetGameState() == LevelController.gameState.shooting)
         {
@@ -237,6 +239,8 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot()
     {
+        rb.drag = 0.5f;
+        rb.freezeRotation = false;
         //based on direction being faced
         if (lvlController.GetGameState() == LevelController.gameState.putting)
         {
