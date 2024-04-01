@@ -7,7 +7,6 @@ public class PauseScreen : MonoBehaviour
 {
     [SerializeField]
     private LevelController levelController;
-
     public void LaunchPause()
     {
         this.gameObject.SetActive(!this.gameObject.activeSelf);

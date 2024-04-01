@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
     private float currentFingerDistance;
 
     //Camera Vars
-    private Camera overlayCam;
     private Camera activeCam;//for later use, switching between the overlay camera and the main camera for raycasting
 
     //Debug Vars
@@ -52,7 +51,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        overlayCam = GameObject.FindGameObjectWithTag("OverCam").GetComponent<Camera>();
         lvlController = GameObject.FindGameObjectWithTag("LVLcontroller").GetComponent<LevelController>();
         powerUIController.InitPower(power);
     }

@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Homescreen.unity
     guid: b2f48e61baff67a4d92ede58eb7451cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Mission_Selection.unity
     guid: 5b048d9922b0b2c42bef9d5f98d1dd95
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Options_Scene.unity
     guid: 4e9fa691da08c9248957a16df0d2774e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay/Level 1 (Tutorial).unity
     guid: d2d99d26eebc6bd408e4f357ca1b6163
   - enabled: 0
@@ -23,9 +23,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Bowe_Level1.unity
     guid: 6b41ac0be9137cb4cbcc2f85870d63d4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay/TestScenes/Level2.unity
     guid: 55641444ea4f3a14ba175c87c9375343
+  - enabled: 1
+    path: Assets/Scenes/Gameplay/ARPrototype.unity
+    guid: 23a438f2220676e40b907706e2f77a98
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2060814f460bc344b9c52a370d8aa34d, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: cc9db1953b162724a9e8545e6d8f70c9, type: 2}
@@ -33,4 +36,5 @@ EditorBuildSettings:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 308795e6cb0006243a754dff93314a3b, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 05e3b571e8cc4004ca9a769757a12020, type: 2}
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: e5a564aa7c71df14b95a5e199e7ccb84, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a480e832c9c785e4795a6efdfe368b9c, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ac9ca683a6f5b1947a6ee7121fe08e98, type: 2}

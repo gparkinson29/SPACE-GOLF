@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.021889487, g: 0.033200357, b: 0.18215078, a: 1}
+  m_IndirectSpecularColor: {r: 0.021883797, g: 0.03319471, b: 0.18214506, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -664,6 +664,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7661376178731191854, guid: 71ababc6d2ead1249a45715a3c40953a, type: 3}
   m_PrefabInstance: {fileID: 172430355}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &210565410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7274956907759982198, guid: 44416f3597459e643884672ca448fe36, type: 3}
+  m_PrefabInstance: {fileID: 1476562627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79be7b920d023844a3d382c6d78ca33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &228875610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5009,6 +5020,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: GamplayStarter
       objectReference: {fileID: 0}
+    - target: {fileID: 676223554165000994, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 676223554165000994, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 210565410}
+    - target: {fileID: 676223554165000994, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LaunchPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 676223554165000994, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 676223554165000994, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183293664987364843, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 210565410}
+    - target: {fileID: 1183293664987364843, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LaunchPause
+      objectReference: {fileID: 0}
     - target: {fileID: 1679575730482149664, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5070,7 +5109,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5835287936829192456, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
