@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: PUTT_Tutorial_Vent
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Approach the vent ahead
-  - If you travel through it, you may be able to access an otherwise inaccessible
-    portion of the ship
+  - Looks like your path is blocked...is there any other way to get around it? A
+    secret passage, maybe?

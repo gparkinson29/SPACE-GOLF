@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: PUTT_Tutorial_Level_Entry
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Now that you've arrived, you should begin searching the craft for the source
-    of the distress beacon
-  - But be careful as you move around
-  - Ships in distress can be full of hazards
+  - Oh! Hello!
+  - Are you a new user? It seems I've been activated to assist you.
+  - I'm your Personal Use Tutorial Tool, but please, call me Putt!
+  - Hmmm...it seems you've been sent on a Distress Beacon Recovery mission, and have
+    just arrived on the ship itself.
+  - The elevator you'd use to get going seems to be out of power, looks like you
+    should re-enable that.
+  - Try looking around! Use your finger to adjust the angle and power of your shot,
+    then press LAUNCH to get moving!

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PUTT_Platform_Tutorial
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Moving platforms are used to transport people and cargo throughout the ship
-  - You too can use the platforms
+  - That looks like a long fall...maybe wait for that platform to make its way over
+    here!

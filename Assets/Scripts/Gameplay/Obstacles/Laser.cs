@@ -23,7 +23,7 @@ public class Laser : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            sfxManager.PlayLaserCollisionAudio();
+            EventManager.Instance.LaserHit();
         }
     }
 }

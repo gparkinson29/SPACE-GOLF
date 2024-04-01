@@ -28,6 +28,7 @@ public class LevelController : MonoBehaviour
         _state = 0;
         currentLevel = PlayerPrefs.GetInt("currentLevel");
         hasUpdatedCurrentLevel = false;
+        gameOverCanvas = GameObject.Find("Game_Over_Canvas").GetComponent<GameObject>();
     }
     private void Update()
     {

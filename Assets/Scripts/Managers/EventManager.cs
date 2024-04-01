@@ -17,7 +17,7 @@ public class EventManager : MonoBehaviour
     [SerializeField]
     private UnityEvent<Dialogue> OnPUTTDialogueChange;
     [SerializeField]
-    private UnityEvent OnDialogueUIUpdate, OnDialogueUIOpen, OnDialogueUIClose, OnAudioPause, OnAudioResume;
+    private UnityEvent OnDialogueUIUpdate, OnDialogueUIOpen, OnDialogueUIClose, OnAudioPause, OnAudioResume, OnLaserHit;
 
     //action subscribing functions
     public void PUTTDialogueSubscriber(Dialogue newDialogue)
@@ -53,6 +53,12 @@ public class EventManager : MonoBehaviour
     public void ResumeAudioPlayback()
     {
         OnAudioResume?.Invoke();
+    }
+
+
+    public void LaserHit()
+    {
+        OnLaserHit?.Invoke();
     }
 
     //getting the private Actions 
