@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Options_Scene.unity
     guid: 4e9fa691da08c9248957a16df0d2774e
   - enabled: 1
-    path: Assets/Scenes/Gameplay/GolfDrog Prototype.unity
+    path: Assets/Scenes/Gameplay/Level 1 (Tutorial).unity
     guid: d2d99d26eebc6bd408e4f357ca1b6163
   - enabled: 0
     path: Assets/Scenes/Bowe_Tutorial_Scene.unity
@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Bowe_Level1.unity
     guid: 6b41ac0be9137cb4cbcc2f85870d63d4
   - enabled: 1
-    path: Assets/Scenes/Gameplay/Level2.unity
+    path: Assets/Scenes/Gameplay/TestScenes/Level2.unity
     guid: 55641444ea4f3a14ba175c87c9375343
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2060814f460bc344b9c52a370d8aa34d, type: 2}
