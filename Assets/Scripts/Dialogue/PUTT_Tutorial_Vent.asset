@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PUTT_Tutorial_Vent
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Looks like your path is blocked...is there any other way to get around it? A
-    secret passage, maybe?
+  - Looks like your path is blocked...is there any other way to get around it?
+  - A secret passage, maybe?

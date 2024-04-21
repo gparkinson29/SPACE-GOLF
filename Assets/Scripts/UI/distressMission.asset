@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: distressMission
   m_EditorClassIdentifier: 
   areaName: Distress Call
-  areaIcon: {fileID: 0}
+  areaIcon: {fileID: 21300000, guid: ac899608d9576294c9061553109ede7c, type: 3}
+  minimumLevelToAccess: 0

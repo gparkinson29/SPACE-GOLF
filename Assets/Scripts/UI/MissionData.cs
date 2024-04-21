@@ -10,7 +10,10 @@ public class MissionData : ScriptableObject
     private string areaName;
     [SerializeField]
     private Sprite areaIcon;
+    [SerializeField]
+    private int minimumLevelToAccess;
 
     public string GetAreaName() { return areaName; }
     public Sprite GetSprite() { return areaIcon; }
+    public int GetMinimumLevelToAccess() {  return minimumLevelToAccess; }
 }

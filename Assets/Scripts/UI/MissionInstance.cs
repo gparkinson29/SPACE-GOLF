@@ -22,6 +22,7 @@ public class MissionInstance : MonoBehaviour
     {
         missionIcon.sprite = missionDataSO.GetSprite();
         missionName.text = missionDataSO.GetAreaName();
+        Time.timeScale = 1;
     }
     
     public void OnMissionClick()
@@ -36,6 +37,11 @@ public class MissionInstance : MonoBehaviour
     public List<LevelInstance> GetAssociatedLevels()
     {
         return associatedLevels;
+    }
+
+    public MissionData GetMissionData()
+    {
+        return missionDataSO;
     }
 
     public Animator GetAnimator()

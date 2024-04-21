@@ -21,6 +21,8 @@ public class LevelController : MonoBehaviour
     private bool hasUpdatedCurrentLevel;
     [SerializeField]
     private GameObject gameOverCanvas;
+    [SerializeField]
+    private int levelNumber;
 
 
     private void Awake()
@@ -84,8 +86,15 @@ public class LevelController : MonoBehaviour
 
     public void SetLevel()
     {
-        currentLevel++;
-        PlayerPrefs.SetInt("currentLevel", currentLevel);
-        PlayerPrefs.Save();
+        if (currentLevel < levelNumber)
+        {
+            currentLevel++;
+            PlayerPrefs.SetInt("currentLevel", currentLevel);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            return;
+        }
     }
 }

@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: PUTT_MissionSelection_Tutorial
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Greetings
-  - I am the Personalized Use Tutorial Tool
-  - But you can call me P.U.T.T.
-  - I was designed by FolgCorp to provide G.O.L.F. model robots with assistance in
-    completing their missions
-  - Your first mission will be to investigate a distress signal coming from a nearby
-    spaceship
-  - Tap on the spaceship button to begin
-  - In the future, you'll be able to access your missions from this screen
+  - Oh! Hello!
+  - Are you a new user? It seems I've been activated to assist you.
+  - I'm your Personal Use Tutorial Tool.
+  - But please, call me P.U.T.T.!
+  - Hmmm...it seems you've been sent to recover a Distress Beacon.
+  - Tap on the spaceship button to travel to the ship.
+  - In the future, you'll be able to access your missions from this screen.

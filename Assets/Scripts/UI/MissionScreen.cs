@@ -25,17 +25,24 @@ public class MissionScreen : MonoBehaviour
 
         if (playerLevel==0)
         {
-            levelList[1].GetLockIcon().gameObject.SetActive(true);
-            levelList[1].GetGreyOut().gameObject.SetActive(true);
-            levelList[1].GetLevelAccessButton().interactable = false;
-            levelList[1].GetAnimator().SetBool("isUnlocked", false);
-            levelList[0].GetAnimator().SetBool("isUnlocked", true);
             EventManager.Instance.PUTTDialogueSubscriber(missionTutorialDialogue);
             EventManager.Instance.DialogueUIOpen();
         }
 
         for (int i = 0; i < levelList.Length; i++)
         {
+            if (levelList[i].GetMissionData().GetMinimumLevelToAccess() > playerLevel)
+            {
+                levelList[i].GetLockIcon().gameObject.SetActive(true);
+                levelList[i].GetGreyOut().gameObject.SetActive(true);
+                levelList[i].GetLevelAccessButton().interactable = false;
+                levelList[i].GetAnimator().SetBool("isUnlocked", false);
+            }
+            else
+            {
+                levelList[i].GetAnimator().SetBool("isUnlocked", true);
+            }
+
             linkedLevels = levelList[i].GetAssociatedLevels();
             for (int j = 0; j < levelList[i].GetAssociatedLevels().Count; j++)
             {

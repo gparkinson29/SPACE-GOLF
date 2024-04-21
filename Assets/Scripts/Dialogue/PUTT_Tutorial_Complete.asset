@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PUTT_Tutorial_Complete
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Well, it would seem the distress signal wasn't in this section of the ship
-  - You should keep exploring
+  - Well, it seems the distress signal wasn't in this section of the ship.
+  - Maybe keep exploring? It's bound to be around here somewhere.

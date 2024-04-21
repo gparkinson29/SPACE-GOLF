@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PUTT_TrashRamp_Tutorial
   m_EditorClassIdentifier: 
   dialogueLines:
-  - 'That debris is gonna slow you down if you pass through it. Is there another
-    way around it? '
+  - That debris is gonna slow you down if you pass through it.
+  - 'Is there another way around it? '

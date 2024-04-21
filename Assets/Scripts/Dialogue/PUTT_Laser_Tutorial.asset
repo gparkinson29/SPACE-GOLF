@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PUTT_Laser_Tutorial
   m_EditorClassIdentifier: 
   dialogueLines:
-  - Careful! Those are high powered lasers! One touch from those and you're toast!
+  - Careful! Those are high powered lasers! One touch and you're toast!
   - Hmm... it seems they're turning on and off on their own timers though.
-  - I'll bet if you can get through them while they're off, you could get to the
-    end of the room.
+  - I'll bet if you can get through them while they're off, you could get to that
+    button.

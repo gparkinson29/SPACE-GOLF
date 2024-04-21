@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 282d4004a455abe4c953dff4cab2e662, type: 3}
   m_Name: Outside
   m_EditorClassIdentifier: 
-  levelNumber: 4
-  levelIcon: {fileID: 21300000, guid: d37e85fa4eb56e54f841dae101356636, type: 3}
+  levelNumber: 2
+  levelIcon: {fileID: 21300000, guid: dc4d9b4f59101cb43b7ec1d45208aab7, type: 3}
   levelName: Outside
