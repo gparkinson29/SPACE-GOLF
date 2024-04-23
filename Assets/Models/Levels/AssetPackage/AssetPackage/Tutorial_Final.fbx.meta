@@ -3,11 +3,46 @@ guid: 1bddbab6391b5614caf1b82f0c287bae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Debris
+    second: {fileID: 2100000, guid: e0ef5a1c84073e941b1630b23c8c301f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserMetal_Secondary
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalDucts
+    second: {fileID: 2100000, guid: 88fc52f654449c44e9ca2b9969b15e14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalFloor
+    second: {fileID: 2100000, guid: 0ed6161360e22cc4989f0af4387be546, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPlate_Floor
+    second: {fileID: 2100000, guid: 566abc90e5c4e6b45a911c5246f13053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: c0247b5e7c6fc5349b48aa447ae09244, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4

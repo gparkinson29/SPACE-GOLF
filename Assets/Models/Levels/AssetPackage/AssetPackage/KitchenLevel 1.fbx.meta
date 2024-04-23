@@ -3,11 +3,276 @@ guid: 1257397838aff754abd9a812813c333d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackBasePlate
+    second: {fileID: 2100000, guid: fff7e8846d6ffb644b298bc1cb6baf47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackBasePlate.001
+    second: {fileID: 2100000, guid: fff7e8846d6ffb644b298bc1cb6baf47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackBasePlate.002
+    second: {fileID: 2100000, guid: fff7e8846d6ffb644b298bc1cb6baf47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackBasePlate.003
+    second: {fileID: 2100000, guid: fff7e8846d6ffb644b298bc1cb6baf47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BurnerCap.001
+    second: {fileID: 2100000, guid: befa4d8bd1af8f1438a2d72d571cae51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BurnerCap.002
+    second: {fileID: 2100000, guid: d4ca93e62ad5f90478ffea1be04da99c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Debris
+    second: {fileID: 2100000, guid: e0ef5a1c84073e941b1630b23c8c301f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Debris.001
+    second: {fileID: 2100000, guid: e0ef5a1c84073e941b1630b23c8c301f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorLight
+    second: {fileID: 2100000, guid: d0ad0dbd3ac24a646a04b4b352293f86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorLight.001
+    second: {fileID: 2100000, guid: 350174f7aeeba984b9924c0a89c9b3db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorLight.002
+    second: {fileID: 2100000, guid: 71723bfad0f54d947b182da99162dc8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorLight.003
+    second: {fileID: 2100000, guid: e3af5e1fd7981d1449ea01e9b5efaa40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorMetalSecondary
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorMetalSecondary.001
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorMetalSecondary.002
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorMetalSecondary.003
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Granite
+    second: {fileID: 2100000, guid: 58a311ee88ebcd84a8af8716db77c88b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Granite.001
+    second: {fileID: 2100000, guid: 58a311ee88ebcd84a8af8716db77c88b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserMetal_Primary
+    second: {fileID: 2100000, guid: 272026c2932cdfd4ca333ea744a38c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserMetal_Primary.001
+    second: {fileID: 2100000, guid: 272026c2932cdfd4ca333ea744a38c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserMetal_Secondary
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LaserMetal_Secondary.001
+    second: {fileID: 2100000, guid: d053f6f41766a1e48a2e8b2cadf062b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: ad0c98421e1f45144a2fbaa1b714c451, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.002
+    second: {fileID: 2100000, guid: ad0c98421e1f45144a2fbaa1b714c451, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalDucts
+    second: {fileID: 2100000, guid: 88fc52f654449c44e9ca2b9969b15e14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalDucts.001
+    second: {fileID: 2100000, guid: 88fc52f654449c44e9ca2b9969b15e14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalFloor
+    second: {fileID: 2100000, guid: 0ed6161360e22cc4989f0af4387be546, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalFloor.001
+    second: {fileID: 2100000, guid: 0ed6161360e22cc4989f0af4387be546, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPlate_Floor
+    second: {fileID: 2100000, guid: 566abc90e5c4e6b45a911c5246f13053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPlate_Floor.001
+    second: {fileID: 2100000, guid: 566abc90e5c4e6b45a911c5246f13053, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPrimary.001
+    second: {fileID: 2100000, guid: 272026c2932cdfd4ca333ea744a38c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPrimary.002
+    second: {fileID: 2100000, guid: 272026c2932cdfd4ca333ea744a38c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPrimary.003
+    second: {fileID: 2100000, guid: 272026c2932cdfd4ca333ea744a38c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalPrimary.004
+    second: {fileID: 2100000, guid: 272026c2932cdfd4ca333ea744a38c09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal.001
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal.002
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal.003
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal.004
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeMetal.005
+    second: {fileID: 2100000, guid: 4b8dbe278367e7f409d52c616c29b0b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OvenExterior
+    second: {fileID: 2100000, guid: b223100518efe6747b97f342610167f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OvenExterior.001
+    second: {fileID: 2100000, guid: 741888de3a657964eb5f04482e62a7d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OvenInterior
+    second: {fileID: 2100000, guid: 0246bac108184db4487e82cf386ec6fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OvenInterior.001
+    second: {fileID: 2100000, guid: 961210329431c114b9641c5420af8918, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PrimarChairMetal
+    second: {fileID: 2100000, guid: 2e2beda80c244b640b067133c9f1b41c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PrimarChairMetal.001
+    second: {fileID: 2100000, guid: 2e2beda80c244b640b067133c9f1b41c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VentCover
+    second: {fileID: 2100000, guid: 9df377a3ebaa3eb4d8760d3df433539c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VentCover.001
+    second: {fileID: 2100000, guid: 9df377a3ebaa3eb4d8760d3df433539c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: c0247b5e7c6fc5349b48aa447ae09244, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall.001
+    second: {fileID: 2100000, guid: c0247b5e7c6fc5349b48aa447ae09244, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stovetop.001
+    second: {fileID: 2100000, guid: 457ade3524cc70743a57c572fc8fe9eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stovetop.002
+    second: {fileID: 2100000, guid: dc8869ac84ea9f24d9dfdab818ac0ffc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stovetop.003
+    second: {fileID: 2100000, guid: 00e10cc515e236c40a01e640b604cb8a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4

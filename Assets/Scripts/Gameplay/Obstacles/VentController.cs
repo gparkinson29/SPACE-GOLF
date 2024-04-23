@@ -24,6 +24,7 @@ public class VentController : MonoBehaviour
             player.transform.position = targetVent.GetExitPoint();
             playerRb.rotation  = targetVent.transform.rotation;
             playerRb.AddForce(-exitPow * targetVent.transform.forward, ForceMode.Impulse);
+            EventManager.Instance.VentEntered();
         }
     }
 

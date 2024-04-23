@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicManager: {fileID: 7110614416881768874}
   SFXManager: {fileID: 8780522000235154123}
-  ambienceManager: {fileID: 651052259091298401}
+  stateManager: {fileID: 0}
 --- !u!1 &7665484015534264942
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +268,8 @@ MonoBehaviour:
   powerDownSource: {fileID: 6330409991181045523}
   laserSource: {fileID: 3634427413314812560}
   buttonSource: {fileID: 8276506402209136999}
-  endAudio: {fileID: 7389584961901094052}
+  ambience1: {fileID: 0}
+  ambience2: {fileID: 0}
   thrusterSounds:
   - {fileID: 8300000, guid: 275c6ecde91d5764c8356f97d7d301a7, type: 3}
   - {fileID: 8300000, guid: 871abde6bfa2618479ed9579b1c7b4c6, type: 3}
@@ -279,8 +280,6 @@ MonoBehaviour:
   powerDownSounds:
   - {fileID: 8300000, guid: d61b4fc908264394ea187acb746471c9, type: 3}
   - {fileID: 8300000, guid: b458dae896410034f977a184dd7c761c, type: 3}
-  winAudio: {fileID: 8300000, guid: 44e0de68b13ae2448997b2fcd40ca968, type: 3}
-  lossAudio: {fileID: 8300000, guid: 269a512d5c9d70844a2bd68bd55a0f39, type: 3}
 --- !u!82 &4865115437470921353
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1191,6 +1190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd73611f3d99ef48a110beb15a030fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambienceSources:
-  - {fileID: 5872962330488347198}
-  - {fileID: 2967601257427974008}
+  endAudio: {fileID: 0}
+  winAudio: {fileID: 0}
+  lossAudio: {fileID: 0}

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Gameplay/Level 3 (Outside Level).unity
+- path: Assets/Scenes/Gameplay/Level 1 (Tutorial).unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
