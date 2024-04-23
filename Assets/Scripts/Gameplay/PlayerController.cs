@@ -47,9 +47,13 @@ public class PlayerController : MonoBehaviour
     //State Machine Vars
     private bool shootingRoutine = false;
 
+    //SFX code
+    public playerAudioController myAudioController;
+
 
     private void Awake()
     {
+        myAudioController = GetComponent<playerAudioController>();
         rb = GetComponent<Rigidbody>();
         lvlController = GameObject.FindGameObjectWithTag("LVLcontroller").GetComponent<LevelController>();
         powerUIController.InitPower(power);
@@ -171,6 +175,7 @@ public class PlayerController : MonoBehaviour
                 rb.Sleep();
                 lvlController.SetGameState(LevelController.gameState.putting);
                 shootingRoutine = false;
+                myAudioController.PlayStop();
             }
         }
     }
@@ -244,7 +249,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 aimForce = transform.forward;
             aimForce.y = 0;
-
+            myAudioController.PlayLaunch();
             rb.AddForce(aimForce * (powerOfShot), ForceMode.Impulse);
             lvlController.SetGameState(LevelController.gameState.shooting);
             power--;

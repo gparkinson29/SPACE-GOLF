@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02189995, g: 0.033210866, b: 0.18216114, a: 1}
+  m_IndirectSpecularColor: {r: 0.02186885, g: 0.033179715, b: 0.18213008, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -422,10 +422,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1344895310}
-    - target: {fileID: 676223554165000994, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LaunchPause
-      objectReference: {fileID: 0}
     - target: {fileID: 1679575730482149664, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -438,46 +434,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4503087895764905129, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 384
-      objectReference: {fileID: 0}
-    - target: {fileID: 5006522358064783642, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.29411766
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524339975903982084, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 61
-      objectReference: {fileID: 0}
-    - target: {fileID: 5524339975903982084, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -300
-      objectReference: {fileID: 0}
-    - target: {fileID: 5550871839593750759, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: fireingButton
-      value: 
-      objectReference: {fileID: 2001190117}
-    - target: {fileID: 6565331848995578510, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.29411766
-      objectReference: {fileID: 0}
-    - target: {fileID: 6580493506851822063, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: levelNumber
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6580493506851822063, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1526076517}
-    - target: {fileID: 7211553482972860541, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_Color.a
-      value: 0.29411766
-      objectReference: {fileID: 0}
-    - target: {fileID: 7584925569978008096, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 49
-      objectReference: {fileID: 0}
     - target: {fileID: 7628646312284135473, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -527,9 +487,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7287040144250913250, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-    - {fileID: 279973297374992937, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
@@ -4065,17 +4023,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3254591967430720901, guid: 1257397838aff754abd9a812813c333d, type: 3}
---- !u!114 &2001190117 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3568164781732249842, guid: 38a6ca18301ac22418e086a66fd0bcf6, type: 3}
-  m_PrefabInstance: {fileID: 185008673}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2001656396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1664643655704438884, guid: 1257397838aff754abd9a812813c333d, type: 3}
