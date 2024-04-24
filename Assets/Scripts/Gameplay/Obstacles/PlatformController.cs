@@ -87,6 +87,7 @@ public class PlatformController : MonoBehaviour
     private bool MoveTowardsTarget(int i)
     {
         transform.position = Vector3.MoveTowards(transform.position, checkpoints.ElementAt<Transform>(i).position, 1f * Time.deltaTime * speed);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, checkpoints.ElementAt<Transform>(i).rotation, 1f * Time.deltaTime * speed*20);
         return transform.position == checkpoints.ElementAt<Transform>(i).position;
     }
 
