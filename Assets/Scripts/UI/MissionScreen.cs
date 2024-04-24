@@ -72,18 +72,8 @@ public class MissionScreen : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
-    public void OnHangarClicked()
-    {
-        SceneManager.LoadScene(5);
-    }
-
-    public void OnEngineClicked()
-    {
-        SceneManager.LoadScene(6);
-    }
-
     public void OnOutsideClicked()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(5);
     }
 }

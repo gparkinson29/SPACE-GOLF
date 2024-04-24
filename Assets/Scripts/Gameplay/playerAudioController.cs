@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class playerAudioController : MonoBehaviour
 {
-    public AudioClip launchSound;
+    public AudioClip[] launchSound;
     public AudioClip stopSound;
 
     private AudioSource mySource;
@@ -18,8 +18,9 @@ public class playerAudioController : MonoBehaviour
     public void PlayLaunch()
     {
         mySource.Stop();
-        mySource.clip = launchSound;
+        mySource.clip = launchSound[Random.Range(0, launchSound.Length)];
         mySource.Play();
+        Debug.Log(mySource.clip.name);
     }
     
     public void PlayStop()

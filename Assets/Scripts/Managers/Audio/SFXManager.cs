@@ -7,9 +7,9 @@ public class SFXManager : MonoBehaviour
     [SerializeField]
     private AudioSource[] SFXSource;
     [SerializeField]
-    private AudioSource movementSource, portalSource, platformSource, powerDownSource, laserSource, buttonSource, ambience1, ambience2;
+    private AudioSource portalSource, powerDownSource, laserSource, buttonSource, ambience1, ambience2;
     [SerializeField]
-    private AudioClip[] thrusterSounds, powerDownSounds;
+    private AudioClip[] powerDownSounds;
 
 
     // Start is called before the first frame update
@@ -18,20 +18,10 @@ public class SFXManager : MonoBehaviour
 
     }
 
-    public void PlayPlatformAudio()
-    {
-        platformSource.Play();
-    }
-
     public void PlayPortalAudio()
     {
         portalSource.Play();
-    }
-
-    public void PlayThrusterAudio()
-    {
-        movementSource.clip = thrusterSounds[Random.Range(0, thrusterSounds.Length)];
-        movementSource.Play();
+        Debug.Log("went through vent");
     }
 
     public void PlayPowerDownAudio()
@@ -42,6 +32,7 @@ public class SFXManager : MonoBehaviour
 
     public void PlayLaserCollisionAudio()
     {
+        Debug.Log("laser collision");
         laserSource.Play();
     }
 

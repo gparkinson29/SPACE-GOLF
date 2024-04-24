@@ -21,10 +21,11 @@ public class VentController : MonoBehaviour
             GameObject player = collision.gameObject;
             Rigidbody playerRb = player.GetComponent<Rigidbody>();
             //do the teleport
+            EventManager.Instance.VentEntered();
             player.transform.position = targetVent.GetExitPoint();
             playerRb.rotation  = targetVent.transform.rotation;
             playerRb.AddForce(-exitPow * targetVent.transform.forward, ForceMode.Impulse);
-            EventManager.Instance.VentEntered();
+            
         }
     }
 
