@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
     //Camera Vars
     private Camera activeCam;//for later use, switching between the overlay camera and the main camera for raycasting
+    [SerializeField]
+    private Camera vCam, overlayCam;
 
     //Debug Vars
     public bool debug = true;
@@ -114,13 +117,14 @@ public class PlayerController : MonoBehaviour
                 float zoomDistance = Vector2.Distance(pinchTouchOne.deltaPosition, pinchTouchTwo.deltaPosition) * 0.01f;
                 if (previousFingerDistance > currentFingerDistance)
                 {
-                    Camera.main.fieldOfView += zoomDistance;
+                    vCam.fieldOfView += zoomDistance;
                 }
                 else if (previousFingerDistance < currentFingerDistance)
                 {
-                    Camera.main.fieldOfView -= zoomDistance;
+                    vCam.fieldOfView -= zoomDistance;
                 }
-                Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 10f, 80f);
+                vCam.fieldOfView = Mathf.Clamp(vCam.fieldOfView, 60f, 100f);
+                overlayCam.fieldOfView = vCam.fieldOfView;
             }
         }
     }

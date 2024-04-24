@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ARObjectPrefab: {fileID: 0}
-  levelPrefab: {fileID: 6515100837773471676, guid: 33ebc7792f1a26e45ba86bcf1b352a06, type: 3}
-  offset: {fileID: 0}
+  levelPrefab: {fileID: 7941510064919498387, guid: dc45d2a5726dcf943b6600be32745f46, type: 3}
   arRaycastManager: {fileID: 0}
+  arPlaneManager: {fileID: 0}
 --- !u!4 &167297909
 Transform:
   m_ObjectHideFlags: 0

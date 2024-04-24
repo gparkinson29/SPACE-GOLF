@@ -1,0 +1,208 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="DialogueManager">
+			<method name="DialogueChanged"/>
+			<method name="DialogueChanged"/>
+			<method name="DialogueChanged"/>
+			<method name="StartWriting"/>
+			<method name="StartWriting"/>
+			<method name="StartWriting"/>
+		</type>
+		<type fullname="DialogueUI">
+			<method name="UpdateUI"/>
+			<method name="UpdateUI"/>
+			<method name="UpdateUI"/>
+		</type>
+		<type fullname="GameOverScreen">
+			<method name="OnHomeButtonClicked"/>
+			<method name="OnHomeButtonClicked"/>
+			<method name="OnHomeButtonClicked"/>
+			<method name="OnMissionsButtonClicked"/>
+			<method name="OnMissionsButtonClicked"/>
+			<method name="OnMissionsButtonClicked"/>
+			<method name="OnRestartClicked"/>
+			<method name="OnRestartClicked"/>
+			<method name="OnRestartClicked"/>
+		</type>
+		<type fullname="MapController">
+			<method name="mapScreenToggle"/>
+			<method name="mapScreenToggle"/>
+			<method name="mapScreenToggle"/>
+			<method name="mapScreenToggle"/>
+			<method name="mapScreenToggle"/>
+		</type>
+		<type fullname="MissionInstance">
+			<method name="OnMissionClick"/>
+			<method name="OnMissionClick"/>
+		</type>
+		<type fullname="MissionScreen">
+			<method name="OnKitchenClicked"/>
+			<method name="OnOutsideClicked"/>
+			<method name="OnTutorialClicked"/>
+		</type>
+		<type fullname="Options">
+			<method name="ReturnHome"/>
+		</type>
+		<type fullname="PauseScreen">
+			<method name="LaunchPause"/>
+			<method name="LaunchPause"/>
+			<method name="LaunchPause"/>
+			<method name="OnHomeClick"/>
+			<method name="OnHomeClick"/>
+			<method name="OnHomeClick"/>
+			<method name="OnQuitClick"/>
+			<method name="OnQuitClick"/>
+			<method name="OnQuitClick"/>
+			<method name="OnRestartClick"/>
+			<method name="OnRestartClick"/>
+			<method name="OnRestartClick"/>
+		</type>
+		<type fullname="PlayerController">
+			<method name="RotateLeft"/>
+			<method name="RotateLeft"/>
+			<method name="RotateLeft"/>
+			<method name="RotateLeft"/>
+			<method name="RotateLeft"/>
+			<method name="RotateRight"/>
+			<method name="RotateRight"/>
+			<method name="RotateRight"/>
+			<method name="RotateRight"/>
+			<method name="RotateRight"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Rotation"/>
+			<method name="Shoot"/>
+			<method name="Shoot"/>
+			<method name="Shoot"/>
+			<method name="Shoot"/>
+			<method name="Shoot"/>
+		</type>
+		<type fullname="SFXManager">
+			<method name="PlayLaserCollisionAudio"/>
+			<method name="PlayLaserCollisionAudio"/>
+			<method name="PlayLaserCollisionAudio"/>
+			<method name="PlayPortalAudio"/>
+			<method name="PlayPortalAudio"/>
+			<method name="PlayPortalAudio"/>
+		</type>
+		<type fullname="TitleScreen">
+			<method name="LoadSettings"/>
+			<method name="StartGame"/>
+		</type>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField">
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel">
+			<method name="OnScrollbarClicked"/>
+			<method name="OnScrollbarClicked"/>
+			<method name="ResetDebugManager"/>
+		</type>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField">
+			<method name="OnDecrement"/>
+			<method name="OnDecrement"/>
+			<method name="OnIncrement"/>
+			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.AudioModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.AudioSource">
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="Pause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.ParticleSystemModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.ParticleSystem">
+			<method name="Play"/>
+			<method name="Play"/>
+			<method name="Play"/>
+		</type>
+	</assembly>
+</linker>

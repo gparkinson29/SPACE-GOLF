@@ -34,7 +34,7 @@ public class DialogueUI : MonoBehaviour
 
     IEnumerator DelayToNextLine()
     {
-        yield return new WaitForSecondsRealtime(2f); //needs to be altered to go after the dialogue finished but this will work for now
+        yield return new WaitForSeconds(2f); //needs to be altered to go after the dialogue finished but this will work for now
         dialogueManager.UpdateLine();
     }
 }
