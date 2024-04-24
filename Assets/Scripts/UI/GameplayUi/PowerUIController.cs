@@ -65,7 +65,7 @@ public class PowerUIController : MonoBehaviour
         }
 
         powerbar.SetPower(currentPower);
-        Debug.Log((float)currentPower / (float)startingPower);
+        //Debug.Log((float)currentPower / (float)startingPower);
         if ((float)currentPower / (float)startingPower > 0.66)
         {
             _current = state.high;
